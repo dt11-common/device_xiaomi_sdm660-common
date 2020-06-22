@@ -315,3 +315,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Fast App Launch
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.device_config.runtime_native.usap_pool_enabled=true
+
+# Seamless transfer
+PRODUCT_PROPERTY_OVERRIDES += \
+  sys.fflag.override.settings_seamless_transfer=true
