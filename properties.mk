@@ -306,3 +306,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     sys.use_fifo_ui=1 \
     pm.dexopt.bg-dexopt=speed-profile \
     pm.dexopt.shared=speed
+
+# Gboard
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.com.google.ime.kb_pad_port_b=1
