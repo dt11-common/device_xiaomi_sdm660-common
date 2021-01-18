@@ -309,4 +309,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Gboard
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.com.google.ime.kb_pad_port_b=1
+    ro.com.google.ime.kb_pad_port_b=1 \
+    ro.com.google.ime.corner_key_r=32
