@@ -32,3 +32,6 @@ genfscon sysfs /devices/soc/soc:qcom,cpubw                      u:object_r:sysfs
 
 # Touchpanel
 genfscon sysfs /touchpanel                                      u:object_r:sysfs_touchpanel:s0
+
+# Fastcharge
+genfscon sysfs /class/power_supply/bms/fastcharge_mode                    u:object_r:sysfs_fcharge:s0

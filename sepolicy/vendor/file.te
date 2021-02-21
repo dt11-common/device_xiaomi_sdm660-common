@@ -18,5 +18,6 @@ type sysfs_backlightdim, sysfs_type, fs_type;
 type sysfs_fpsinfo, sysfs_type, fs_type;
 type sysfs_fps, sysfs_type, fs_type;
 type sysfs_touchboost, sysfs_type, fs_type;
-
+# Fastcharge
+type sysfs_fcharge, sysfs_type, fs_type;
 
