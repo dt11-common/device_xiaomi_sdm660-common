@@ -101,7 +101,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libhdmiedid \
     libhfp \
-    libsndmonitor
+    libsndmonitor \
+    libldacBT_dec
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
@@ -142,7 +143,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap
+#    Snap
 
 PRODUCT_PACKAGES += \
     android.hardware.camera.device@3.4:64 \
