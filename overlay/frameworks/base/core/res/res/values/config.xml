@@ -345,5 +345,7 @@
          Off by default, since the framebuffer readback used to implement the
          fading edges is prohibitively expensive on most GPUs. -->
     <bool name="config_ui_enableFadingMarquee">true</bool>
->>>>>>> ab72ce8... sdm660-common : Make the UI smoother
+
+    <!-- Vowifi -->
+    <bool name="config_hasVowifi">true</bool>
 </resources>
