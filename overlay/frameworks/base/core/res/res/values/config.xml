@@ -326,4 +326,10 @@
          screenshot chord -->
    <integer name="config_screenshotChordKeyTimeout">0</integer>
 
+    <!-- True if the firmware supports connected MAC randomization -->
+    <bool name="config_wifi_connected_mac_randomization_supported">true</bool>
+
+    <!-- True if the firmware supports p2p MAC randomization -->
+    <bool name="config_wifi_p2p_mac_randomization_supported">true</bool>
+
 </resources>
