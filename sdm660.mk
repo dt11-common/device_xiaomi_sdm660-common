@@ -28,7 +28,7 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-pe \
+    $(LOCAL_PATH)/overlay-pe
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
@@ -477,6 +477,10 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/Youtube/lib/arm/libvpxYTJNI.so:$(TARGET_COPY_OUT_SYSTEM)/app/Youtube/lib/arm/libvpxYTJNI.so \
 	$(LOCAL_PATH)/Youtube/lib/arm/libwebp_android.so:$(TARGET_COPY_OUT_SYSTEM)/app/Youtube/lib/arm/libwebp_android.so \
 	$(LOCAL_PATH)/Youtube/lib/arm/libyoga.so:$(TARGET_COPY_OUT_SYSTEM)/app/Youtube/lib/arm/libyoga.so
+
+# Soong
+PRODUCT_BOARD_PLATFORM := sdm660
+PRODUCT_USES_QCOM_HARDWARE := true
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/sdm660-common/sdm660-common-vendor.mk)
