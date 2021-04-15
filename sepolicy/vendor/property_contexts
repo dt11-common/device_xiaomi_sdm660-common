@@ -7,6 +7,7 @@ persist.audio.dirac.                    u:object_r:dirac_prop:s0
 persist.audio.fluence.voicecomm         u:object_r:vendor_default_prop:s0
 
 # Camera
+camera.                                 u:object_r:camera_prop:s0
 camera.clientname                       u:object_r:camera_prop:s0
 camera.debug.                           u:object_r:camera_prop:s0
 camera.facebeauty.version               u:object_r:camera_prop:s0
@@ -58,3 +59,4 @@ vendor.thermal.config                   u:object_r:vendor_thermal_prop:s0
 
 # Wlan
 persist.vendor.wigig.npt.enable         u:object_r:vendor_default_prop:s0
+
