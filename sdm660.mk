@@ -25,6 +25,9 @@
 $(call inherit-product, $(LOCAL_PATH)/properties.mk)
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
+# Enable updating of APEXes
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
@@ -78,6 +81,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 2160
+TARGET_SCREEN_WIDTH := 1080
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -175,13 +182,16 @@ PRODUCT_PACKAGES += \
     hwcomposer.sdm660 \
     memtrack.sdm660 \
     libdisplayconfig \
+    libdisplayconfig.qti \
+    libdisplayconfig.qti.vendor \
     libtinyxml \
     libqdMetaData \
     libqdMetaData.system \
-    libstagefright_enc_common
+    libstagefright_enc_common \
+    vendor.display.config@2.0 \
+    vendor.display.config@2.0.vendor
 
 PRODUCT_PACKAGES += \
-    android.frameworks.displayservice@1.0_32 \
     android.hardware.graphics.allocator@2.0-impl:64 \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
@@ -189,8 +199,7 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
     android.hardware.renderscript@1.0-impl \
-    android.frameworks.displayservice@1.0 \
-    vendor.display.config@1.1
+    android.frameworks.displayservice@1.0
 
 # Doze
 PRODUCT_PACKAGES += \
