@@ -55,3 +55,6 @@
 
 # FPS Info
 /sys/devices/virtual/graphics/fb0/measured_fps                              u:object_r:sysfs_fps:s0
+
+# Video4linux sysfs nodes
+/sys/devices/soc/caa0000\.qcom,jpeg/video4linux/video1(/.*)?                 u:object_r:sysfs_graphics:s0
