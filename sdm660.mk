@@ -26,7 +26,11 @@ $(call inherit-product, $(LOCAL_PATH)/properties.mk)
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # Enable updating of APEXes
-#$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+ifeq ($(ENABLE_APEX), true)
+TARGET_SUPPORTS_UPDATABLE_APEX := true
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+$(call inherit-product-if-exists, vendor/prebuilts/config/apex.mk)
+endif
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
